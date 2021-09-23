@@ -33,53 +33,68 @@
   color: #8e8ea3;
 }
 
-.login-content {
+.auth-content {
   background: #16162a;
   width: 100%;
+  height: 100vh;
   padding: 96px;
   padding-right: 192px;
 }
 
-.login-content .date {
+.auth-content .terms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.auth-content .terms:hover {
+  text-decoration: underline;
+}
+
+.auth-content .date {
   color: #8e8ea3;
 }
 
-.login-content .tab-wrapper {
+.auth-content .tab-wrapper {
   border-bottom: 2px solid #52526b;
 }
 
-.login-content .tab-wrapper a {
+.auth-content .tab-wrapper a {
   font-size: 18px;
 }
 
-.login-content .tab-wrapper .title {
+.auth-content .tab-wrapper .title {
   text-decoration: none;
   font-weight: 500;
 }
 
-.login-content .form-login {
+.auth-content .form-auth {
   margin-top: 40px;
   border: 2px solid #818191;
   padding: 20px;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.login-content .form-login label {
+.auth-content .form-auth label {
   font-size: 13px;
 }
 
-.login-content .form-login .form-input {
+.auth-content .form-auth .form-input {
   background: #16162a;
   border-color: #818191;
   color: white;
 }
 
-.login-content .form-login .form-input:focus {
+.auth-content .form-auth .form-input:focus {
   border-color: #563eee;
   color: white;
 }
 
-.login-content .btn-primary {
+.auth-content .btn-primary {
   background: #16162a;
   border-color: #818191;
   font-size: 16px;
@@ -88,17 +103,17 @@
   border-radius: 4px;
 }
 
-.login-content .btn-primary:hover {
+.auth-content .btn-primary:hover {
   background: black;
   border-color: #818191;
 }
 
-.login-content .btn-primary:focus {
+.auth-content .btn-primary:focus {
   background: black;
   border-color: #818191;
 }
 
-.login-content .btn-secondary {
+.auth-content .btn-secondary {
   background: #eaeaff;
   border-color: #eaeaff;
   font-size: 16px;
@@ -108,7 +123,7 @@
   color: black;
 }
 
-.login-content .btn-secondary:hover {
+.auth-content .btn-secondary:hover {
   background: #cfcfd8;
   border-color: #cfcfd8;
 }
