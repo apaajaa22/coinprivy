@@ -1,16 +1,133 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-a {
-  color: inherit;
+.sidebar {
+  background: #292946;
+  height: 100vh;
+  padding: 99px;
+}
+
+.sidebar .wrapper-content {
+  padding-left: 32px;
+}
+
+.sidebar .wrapper-content .wrapper-title {
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+
+.sidebar .wrapper-content .wrapper-title .title {
+  margin-bottom: 0px;
+  line-height: 36px;
+  font-size: 32px;
+}
+
+.sidebar .wrapper-content .description {
+  color: #8e8ea3;
+}
+
+.login-content {
+  background: #16162a;
+  width: 100%;
+  padding: 96px;
+  padding-right: 192px;
+}
+
+.login-content .date {
+  color: #8e8ea3;
+}
+
+.login-content .tab-wrapper {
+  border-bottom: 2px solid #52526b;
+}
+
+.login-content .tab-wrapper a {
+  font-size: 18px;
+}
+
+.login-content .tab-wrapper .title {
   text-decoration: none;
+  font-weight: 500;
 }
 
-* {
-  box-sizing: border-box;
+.login-content .form-login {
+  margin-top: 40px;
+  border: 2px solid #818191;
+  padding: 20px;
+  border-radius: 10px;
 }
+
+.login-content .form-login label {
+  font-size: 13px;
+}
+
+.login-content .form-login .form-input {
+  background: #16162a;
+  border-color: #818191;
+  color: white;
+}
+
+.login-content .form-login .form-input:focus {
+  border-color: #563eee;
+  color: white;
+}
+
+.login-content .btn-primary {
+  background: #16162a;
+  border-color: #818191;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 32px;
+  border-radius: 4px;
+}
+
+.login-content .btn-primary:hover {
+  background: black;
+  border-color: #818191;
+}
+
+.login-content .btn-primary:focus {
+  background: black;
+  border-color: #818191;
+}
+
+.login-content .btn-secondary {
+  background: #eaeaff;
+  border-color: #eaeaff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 32px;
+  border-radius: 4px;
+  color: black;
+}
+
+.login-content .btn-secondary:hover {
+  background: #cfcfd8;
+  border-color: #cfcfd8;
+}
+
+.bar-active {
+  color: white;
+  border-bottom: 3px solid;
+  border-bottom-color: #563eee;
+}
+
+.bar-active:hover {
+  color: #dbd2d2;
+}
+
+.bar-nonactive {
+  color: #818191;
+}
+
+.bar-nonactive:hover {
+  color: #dbd2d2;
+}
+/*# sourceMappingURL=globals.css.map */
