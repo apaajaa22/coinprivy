@@ -1,16 +1,20 @@
 import React from "react"
+import DataCountry from "../dataCountry.json"
 
 export default function SelectCountry() {
   return (
     <select className=" form-control form-input">
-      <option value="Afghanistan">Afghanistan (+93)</option>
-      <option value="Brazil">Brazil (+55)</option>
-      <option selected value="Indonesia">
-        Indonesia (+62)
-      </option>
-      <option value="Italy">Italy (+39)</option>
-      <option value="Jordan">Jordan (+962)</option>
-      <option value="Korea">Korea (+82)</option>
+      {DataCountry.map((data) => {
+        return (
+          <option
+            selected={data.name === "Indonesia"}
+            key={data.name}
+            value={data.name}
+          >
+            {data.name} ({data.dial_code})
+          </option>
+        )
+      })}
     </select>
   )
 }

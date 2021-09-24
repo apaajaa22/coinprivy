@@ -3,7 +3,7 @@ import SideBar from "../../components/SideBar"
 
 export default function Register() {
   return (
-    <section className="parent">
+    <section className="d-flex flex-row">
       <SideBar />
       <RegisterContent />
     </section>

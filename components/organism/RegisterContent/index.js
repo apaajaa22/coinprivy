@@ -3,6 +3,7 @@ import Link from "next/link"
 import Button from "../../Button"
 import SelectCountry from "../../SelectCountry"
 import Image from "next/image"
+import {useRouter} from "next/router"
 export default function RegisterContent() {
   const monthNames = [
     "January",
@@ -22,6 +23,10 @@ export default function RegisterContent() {
   const day = date.getDate()
   const month = monthNames[date.getMonth()]
   const year = date.getFullYear()
+  const router = useRouter()
+  const onRegister = () => {
+    router.push("/")
+  }
   return (
     <section className="auth-content ">
       <p className="date mb-5">{`Today ${month} ${day}, ${year}`}</p>
@@ -66,13 +71,9 @@ export default function RegisterContent() {
         <Image src="/img/terms.svg" alt="logo" width={24} height={24} />
         Terms and conditions
       </a>
-      <section className="mt-3 row">
-        <div className="col flex-grow-0">
-          <Button title="Reset" type="primary" />
-        </div>
-        <div className="col">
-          <Button title="Register" type="secondary" />
-        </div>
+      <section className="mt-3 d-flex flex-row gap-3">
+        <Button title="Reset" type="primary" />
+        <Button onClick={onRegister} title="Register" type="secondary" />
       </section>
     </section>
   )

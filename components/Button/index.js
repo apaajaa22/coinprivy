@@ -1,12 +1,24 @@
 import React from "react"
 
-export default function Button({type, title}) {
+export default function Button({type, title, onClick}) {
   switch (type) {
     case "primary":
-      return <button className="btn btn-primary">{title}</button>
+      return (
+        <a onClick={onClick} className="btn btn-primary">
+          {title}
+        </a>
+      )
     case "secondary":
-      return <button className="btn btn-secondary">{title}</button>
+      return (
+        <a onClick={onClick} className="btn btn-secondary">
+          {title}
+        </a>
+      )
     default:
-      return <button className="btn btn-primary">{title}</button>
+      return (
+        <a onClick={onClick} className="btn btn-primary">
+          {title}
+        </a>
+      )
   }
 }

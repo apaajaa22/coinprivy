@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import Button from "../../Button"
+import {useRouter} from "next/router"
 export default function LoginContent() {
   const monthNames = [
     "January",
@@ -20,6 +21,11 @@ export default function LoginContent() {
   const day = date.getDate()
   const month = monthNames[date.getMonth()]
   const year = date.getFullYear()
+  const router = useRouter()
+  const onLogin = () => {
+    router.push("/verification")
+  }
+
   return (
     <section className="auth-content ">
       <p className="date mb-5">{`Today ${month} ${day}, ${year}`}</p>
@@ -51,13 +57,9 @@ export default function LoginContent() {
           />
         </div>
       </form>
-      <section className="mt-3 row">
-        <div className="col flex-grow-0">
-          <Button title="Reset" type="primary" />
-        </div>
-        <div className="col">
-          <Button title="Login" type="secondary" />
-        </div>
+      <section className="mt-3 d-flex flex-row gap-3">
+        <Button title="Reset" type="primary" />
+        <Button onClick={onLogin} title="Login" type="secondary" />
       </section>
     </section>
   )
