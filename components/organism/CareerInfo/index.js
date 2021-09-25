@@ -27,7 +27,7 @@ export default function CareerInfo() {
       <section className="wrapper-profile-content mb-4">
         <p className="text-white title mb-1">Wong Fei Hung</p>
         <p className="subtitle">Level 1 - #SG769891</p>
-        <section className="row row-cols-auto tab-wrapper mx-1 gap-4 mb-5">
+        <section className="row row-cols-auto tab-wrapper mx-1 gap-4 my-5">
           <Link href="/profile">
             <a className="bar-nonactive title-bar me-3">Information</a>
           </Link>

@@ -2,13 +2,7 @@ import React, {useState} from "react"
 import Image from "next/image"
 import {useRouter} from "next/router"
 import Link from "next/link"
-import TextInput from "../../TextInput"
-import SelectDate from "../../SelectDate"
-import Button from "../../Button"
-import CareerItem from "../../CareerItem"
-export default function EducationInfo() {
-  const [disabled, setDisabled] = useState(true)
-  const [school, setSchool] = useState("")
+export default function GaleryInfo() {
   const router = useRouter()
   const onDiscard = () => {
     setSchool("")
@@ -35,18 +29,18 @@ export default function EducationInfo() {
             <a className="bar-nonactive title-bar">Career</a>
           </Link>
           <Link href="/profile/education">
-            <a className="bar-active title-bar">Education</a>
+            <a className="bar-nonactive title-bar">Education</a>
           </Link>
           <Link href="/profile/galery">
-            <a className="bar-nonactive title-bar">Gallery</a>
+            <a className="bar-active title-bar">Gallery</a>
           </Link>
         </section>
         <section className="info-user">
           <div className="px-3">
             <div className="d-flex flex-row ">
               <div className="flex-grow-1">
-                <p className="title-label mb-1">Education Information</p>
-                <p className="subtitle">Information about your education</p>
+                <p className="title-label mb-1">Gallery</p>
+                <p className="subtitle">Upload your special moment</p>
               </div>
               <button
                 onClick={() => setDisabled(false)}
@@ -60,29 +54,17 @@ export default function EducationInfo() {
                 />
               </button>
             </div>
-            <TextInput
-              value={school}
-              onChange={(e) => setSchool(e.target.value)}
-              disabled={disabled}
-              title="School Name"
-            />
-            <SelectDate title="Graduation Time" />
-            <section className="mt-4 d-flex flex-row gap-3 mb-5">
-              <Button onClick={onDiscard} title="Discard" type="primary" />
-              <Button title="Add Education" type="secondary" />
+            <section className="row pb-2">
+              <div className="col-4 mt-4">
+                <Image
+                  src="/img/ImgDummy.png"
+                  width={166}
+                  height={260}
+                  alt="img-upload"
+                  className="image-upload"
+                />
+              </div>
             </section>
-            <CareerItem
-              title="PT Erkananta"
-              subtitle="Jul 7, 2020 - Jul 7, 2021"
-            />
-            <CareerItem
-              title="PT Erkananta"
-              subtitle="Jul 7, 2020 - Jul 7, 2021"
-            />
-            <CareerItem
-              title="PT Erkananta"
-              subtitle="Jul 7, 2020 - Jul 7, 2021"
-            />
           </div>
         </section>
       </section>

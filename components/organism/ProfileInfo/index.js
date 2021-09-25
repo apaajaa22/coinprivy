@@ -49,7 +49,7 @@ export default function ProfileInfo() {
               width={224}
               height={224}
               alt="img user"
-              className="rounded"
+              className="rounded image-user"
             />
             <button onClick={() => console.log("a")} className="btn btn-custom">
               Upload Media

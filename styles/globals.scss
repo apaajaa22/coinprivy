@@ -194,6 +194,10 @@
       border: 1px solid #727274;
       padding: 32px;
       color: white;
+      .image-upload {
+        border-radius: 6px;
+        object-fit: cover;
+      }
       .btn-add {
         background: #16162a;
         border: none;
@@ -207,6 +211,10 @@
       }
       .content-right-info {
         padding: 0px 55px;
+        .image-user {
+          border-radius: 6px;
+          object-fit: cover;
+        }
         .btn-edit {
           background: #16162a;
           border: none;

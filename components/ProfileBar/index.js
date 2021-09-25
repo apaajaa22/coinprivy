@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function ProfileBar() {
   return (
-    <section className="row row-cols-auto tab-wrapper mx-1 gap-4 mb-5">
+    <section className="row row-cols-auto tab-wrapper mx-1 gap-4 my-5">
       <Link href="/profile">
         <a className="bar-active title-bar me-3">Information</a>
       </Link>
