@@ -4,10 +4,10 @@ import {useRouter} from "next/router"
 import SelectZodiak from "../../SelectZodiak"
 import SelectGender from "../../SelectGender"
 import SelectDate from "../../SelectDate"
-import TextName from "../../TextName"
 import ProfileBar from "../../ProfileBar"
 import TextArea from "../../TextArea"
 import Button from "../../Button"
+import TextInput from "../../TextInput"
 export default function ProfileInfo() {
   const router = useRouter()
   return (
@@ -29,17 +29,20 @@ export default function ProfileInfo() {
             <p className="title-label mb-1">Profile Information</p>
             <p className="subtitle">Your personal data</p>
             <p className="title-label mt-4">Profile Detail</p>
-            <TextName />
+            <TextInput title="Name *" />
             <SelectGender />
             <SelectDate />
             <SelectZodiak />
             <TextArea title="Bio" />
-            <section className="mt-3 d-flex flex-row justify-content-between">
+            <section className="mt-4 d-flex flex-row justify-content-between">
               <Button title="Discard" type="primary" />
               <Button title="Update" type="secondary" />
             </section>
           </div>
           <div className="content-right-info mt-5 ">
+            <button className="float-end btn-edit">
+              <Image src="/img/Edit.svg" alt="edit" width={20} height={21} />
+            </button>
             <p className="title-label mt-4 mb-4">Profile Picture</p>
             <Image
               src="/img/user.png"
@@ -48,9 +51,9 @@ export default function ProfileInfo() {
               alt="img user"
               className="rounded"
             />
-            <a onClick={() => console.log("a")} className="btn btn-custom">
+            <button onClick={() => console.log("a")} className="btn btn-custom">
               Upload Media
-            </a>
+            </button>
             <p className="text-warn">PNG, JPG or MP4 up to 50MB</p>
             <TextArea title="Address" />
           </div>
